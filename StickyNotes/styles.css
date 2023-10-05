@@ -84,7 +84,7 @@ body{
     color: #fff;
 }
 
-.createBox{
+.create__box{
     position: relative;
     width: var(---size);
     height: var(---size);
@@ -92,7 +92,7 @@ body{
     display: none;
 }
 
-.createBox textarea{
+.create__textarea textarea{
     position: absolute;
     inset: 0;
     top: 0;
@@ -106,8 +106,9 @@ body{
 
 }
 
-.details h3{
+.note__text h3{
     font-style: italic;
     user-select: none;
     font-size: 1.45em;
 }
+

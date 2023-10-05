@@ -1,25 +1,34 @@
-let createBox = document.querySelectorAll('.createBox')[0],
+let createBox = document.querySelectorAll('.create__box')[0],
     notes = document.querySelectorAll('.notes')[0],
-    input = document.querySelector('#input'),
+    textareaUserInput = document.querySelector('#input'),
     create = document.querySelector('#create'),
     i = 0;
 
-createBox.addEventListener('keydown', content);
+createBox.addEventListener('keydown', pasteContentToNote);
+create.addEventListener('click', showUserTextInput);
+notes.addEventListener('dblclick', deleteNote);
 
-create.addEventListener('click', function () {
+function showUserTextInput() {
     createBox.style.display = 'block';
-    input.focus();
-});
+    textareaUserInput.focus();
+}
 
-function content(e) {
+function deleteNote(e) {
+    if (e.target.classList.contains('note')) {
+        // Удаляем элемент
+        e.target.remove();
+    }
+}
+
+function pasteContentToNote(e) {
     if (e.keyCode == '13') {
-        createNote(input.value);
-        input.value = '';
+        createNote(textareaUserInput.value);
+        textareaUserInput.value = '';
         createBox.style.display = 'none';
     }
 }
 
-function color() {
+function setRandomNoteColor() {
     const randomColors = [
         '#FFDDC1',
         '#A0E6FF',
@@ -50,15 +59,10 @@ function color() {
 }
 
 function createNote(text) {
-    let div = document.createElement('div');
-    div.className = 'note';
-    div.innerHTML =
-        '<div class="details">' + '<h3>' + text + '</h3>' + '</div>';
+    let newNote = document.createElement('div');
+    newNote.className = 'note';
+    newNote.innerHTML = `<div class="note__text"><h3>${text}</h3></div>`;
 
-    div.addEventListener('dblclick', function (event) {
-        div.remove();
-    });
-
-    div.setAttribute('style', `background: ${color()}`);
-    notes.appendChild(div);
+    newNote.setAttribute('style', `background: ${setRandomNoteColor()}`);
+    notes.appendChild(newNote);
 }
