@@ -6,11 +6,18 @@ let createBox = document.querySelectorAll('.create__box')[0],
 
 createBox.addEventListener('keydown', pasteContentToNote);
 create.addEventListener('click', showUserTextInput);
+create.addEventListener('keydown', hideUserTextInput);
 notes.addEventListener('dblclick', deleteNote);
 
 function showUserTextInput() {
     createBox.style.display = 'block';
     textareaUserInput.focus();
+}
+
+function hideUserTextInput(e) {
+    if (e.keyCode == '27') {
+        createBox.style.display = 'none';
+    }
 }
 
 function deleteNote(e) {
