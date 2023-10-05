@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <title>Sticky Notes</title>
 </head>
+
 <body>
     <div class="container">
         <div class="notes">
@@ -18,10 +22,33 @@
                     </div>
                 </div>
             </div>
-            <div class="note">This note is a presentation note you can delete it if you need to. Just hover over it.</div>
+            <div class="note">This note is a presentation note you can delete it if you need to. Just hover over it.
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+   
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <span id="closeModalBtn" class="modal__close">&times;</span>
+            <h2 class="modal__title">welcome to sticky notes app</h2>
+            <p class="modal__descr">Here you can see some instructions before using app</p>
+            <p class="modal__instructions">
+                Instructions: <br>
+                1) Click on create element then enter some text and press <span>ENTER</span> key.
+                <br>
+                2) If you want to discard creating note press <span>ESC</span>.
+                <br>
+                3) To delete note you need to <span>double click</span> on it, also you can see alternative message about delete when hovering on note.
+
+            </p>
+
+            <div class="modal__ending">happy using =)</div>
+        </div>
+    </div>
+    
+    <script src="./script/NotesModule.js"></script>
+    <script src="./script/ModalModule.js"></script>
 </body>
+
 </html>
