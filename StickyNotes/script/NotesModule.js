@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function createNote(text) {
         let newNote = document.createElement('div');
         newNote.className = 'note';
-        newNote.innerHTML = `<div class="note__text"><h3>${text}</h3></div>`;
+        newNote.textContent = text;
 
         newNote.setAttribute('style', `background: ${setRandomNoteColor()}`);
         notes.appendChild(newNote);

@@ -40,7 +40,7 @@ body{
 .container .notes .note{
     font-family: 'Caveat', cursive;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 2.1875rem;
     position: relative;
     width: var(---size);
     height: var(---size);
@@ -52,6 +52,8 @@ body{
 
 .container .notes .note::before{
     content: 'Double Click to remove this note';
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -61,7 +63,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.85em;
     opacity: 0;
     transition: 0.5s all;
 
