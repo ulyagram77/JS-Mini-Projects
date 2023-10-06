@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=JetBrains+Mono:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap');
 
 *{
     margin: 0;
@@ -36,12 +38,16 @@ body{
 }
 
 .container .notes .note{
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+    font-size: 35px;
     position: relative;
     width: var(---size);
     height: var(---size);
     background: #f7e98d;
     padding: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    word-wrap: break-word;
 }
 
 .container .notes .note::before{
