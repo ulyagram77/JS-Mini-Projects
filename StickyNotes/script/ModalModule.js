@@ -2,9 +2,7 @@ const modalWindow = document.querySelector('.modal'),
       closeModalWindow = document.querySelector('.modal__close');
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Відкриття модального вікна
     modalWindow.style.display = 'block';
-
 });
 
 modalWindow.addEventListener('click', function(event) {
@@ -12,7 +10,6 @@ modalWindow.addEventListener('click', function(event) {
         modalWindow.style.display = 'none';
     }
 });
-
 
 closeModalWindow.addEventListener('click', function(event) {
     modalWindow.style.display = 'none';

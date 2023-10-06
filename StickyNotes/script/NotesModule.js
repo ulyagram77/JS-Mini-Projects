@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     create.addEventListener('keydown', hideUserTextInput);
     notes.addEventListener('dblclick', deleteNote);
 
-    function showUserTextInput() {
+    function showUserTextInput(e) {
         createBox.style.display = 'block';
         textareaUserInput.focus();
     }
