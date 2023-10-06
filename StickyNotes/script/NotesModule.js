@@ -21,6 +21,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function createNote(text) {
+        let newNote = document.createElement('div');
+        newNote.className = 'note';
+        newNote.textContent = text;
+
+        newNote.setAttribute('style', `background: ${setRandomNoteColor()}`);
+        notes.appendChild(newNote);
+    }
+
     function deleteNote(e) {
         if (e.target.classList.contains('note')) {
             // Удаляем элемент
@@ -49,29 +58,17 @@ document.addEventListener('DOMContentLoaded', function () {
             '#FFC3A0',
             '#FF677D',
             '#D4A5A5',
-            '#392F5A',
-            '#31A2AC',
+            '#f7e98d',
             '#61C0BF',
-            '#6B4226',
-            '#D9BF77',
+            '#ffffff',
             '#ACD8AA',
             '#FFE156',
-            '#6A0572',
             '#AB83A1',
         ];
 
-        if (i > randomColors.length - 1) {
-            i = 0;
-        }
-        return randomColors[i++];
+        let randomColorIndex = Math.floor(Math.random() * randomColors.length);
+        return randomColors[randomColorIndex];
     }
 
-    function createNote(text) {
-        let newNote = document.createElement('div');
-        newNote.className = 'note';
-        newNote.textContent = text;
-
-        newNote.setAttribute('style', `background: ${setRandomNoteColor()}`);
-        notes.appendChild(newNote);
-    }
+    
 });
