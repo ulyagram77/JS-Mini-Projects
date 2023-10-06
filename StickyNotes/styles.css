@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Handlee&family=JetBrains+Mono:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'JetBrains Mono', monospace;
 }
 
-:root{
+:root {
     ---size: 300px;
 }
 
-body{
+body {
     background: #2f363e;
 }
 
-.container{
+.container {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -29,7 +28,7 @@ body{
     padding: 50px;
 }
 
-.container .notes{
+.container .notes {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
@@ -37,8 +36,9 @@ body{
     align-items: flex-start;
 }
 
-.container .notes .note{
+.container .notes .note {
     font-family: 'Caveat', cursive;
+    border-radius: 15px;
     font-weight: 400;
     font-size: 2.1875rem;
     position: relative;
@@ -50,7 +50,7 @@ body{
     word-wrap: break-word;
 }
 
-.container .notes .note::before{
+.container .notes .note::before {
     content: 'Double Click to remove this note';
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.875rem;
@@ -65,33 +65,31 @@ body{
     align-items: center;
     opacity: 0;
     transition: 0.5s all;
-
 }
 
-.container .notes .note:hover::before{
+.container .notes .note:hover::before {
     opacity: 1;
-
 }
 
-#create{
+#create {
     position: relative;
     width: var(---size);
     height: var(---size);
     background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 6em;
     cursor: pointer;
-
 }
 
-#create i{
+#create i {
     position: absolute;
     color: #fff;
 }
 
-.create__box{
+.create__box {
     position: relative;
     width: var(---size);
     height: var(---size);
@@ -99,7 +97,7 @@ body{
     display: none;
 }
 
-.create__textarea textarea{
+.create__textarea textarea {
     position: absolute;
     inset: 0;
     top: 0;
@@ -110,15 +108,13 @@ body{
     outline: none;
     font-size: 0.2em;
     resize: none;
-
 }
 
-.note__text h3{
+.note__text h3 {
     font-style: italic;
     user-select: none;
     font-size: 1.45em;
 }
-
 
 .modal {
     display: none;
@@ -148,31 +144,30 @@ body{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.modal__title{
+.modal__title {
     margin-top: 50px;
     text-transform: uppercase;
     font-size: 30px;
 }
 
-.modal__descr{
+.modal__descr {
     margin-top: 10px;
     font-size: 18px;
 }
 
-.modal__instructions{
+.modal__instructions {
     margin-top: 50px;
     text-align: left;
     line-height: 30px;
     font-size: 20px;
 }
 
-
-.modal__instructions span{
+.modal__instructions span {
     color: #f7e98d;
     text-transform: uppercase;
 }
 
-.modal__ending{
+.modal__ending {
     margin-top: 30px;
     font-size: 30px;
 }
@@ -185,4 +180,3 @@ body{
     line-height: 40px;
     cursor: pointer;
 }
-
